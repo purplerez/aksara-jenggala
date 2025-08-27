@@ -71,18 +71,12 @@
 									</figcaption>
 								</div>
 							</div>
-
 						</div><!--ft-books-slider-->
 					</div><!--grid-->
-
-
 				</div><!--inner-content-->
 			</div>
 		</div>
 	</section>
-
-	
-
 	<section id="quotation" class="align-center pb-5 mb-5">
 		<div class="inner-content">
 			<h2 class="section-title divider">Quote of the day</h2>
