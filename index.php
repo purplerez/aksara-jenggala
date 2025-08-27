@@ -2,12 +2,12 @@
 <html lang="en">
     <?php include('component/header.php'); ?>
     <body data-bs-spy="scroll" data-bs-target="#header" tabindex="0">
-        <?php 
+        <?php
             $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
-            if($page == 'home') include "page/home.php";
-            else if ($page == 'shopall') include "page/shop-all.php";
-            else if ($page == 'detail') include "page/detail.php";
+            if($page == 'home') { include "page/home.php"; }
+            else if ($page == 'shopall') { include "page/shop-all.php"; }
+            else if ($page == 'detail') { include "page/detail.php"; }
 
         ?>
 
