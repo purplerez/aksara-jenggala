@@ -8,7 +8,7 @@
             if($page == 'home') { include "page/home.php"; }
             else if ($page == 'shopall') { include "page/shop-all.php"; }
             else if ($page == 'detail') { include "page/detail.php"; }
-
+            
         ?>
 
         <?php include "component/footer.php"; ?>
