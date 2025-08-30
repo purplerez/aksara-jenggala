@@ -3,16 +3,9 @@
     <?php include('component/header.php'); ?>
     <body data-bs-spy="scroll" data-bs-target="#header" tabindex="0">
         <?php
-            $page = isset($_GET['page']) ? $_GET['page'] : 'home';
-
-            if($page == 'home') { include "page/home.php"; }
-            else if ($page == 'shopall') { include "page/shop-all.php"; }
-            else if ($page == 'detail') { include "page/detail.php"; }
-            
+            require_once('route/web.php');
+            include "component/footer.php";
         ?>
-
-        <?php include "component/footer.php"; ?>
-
         <script src="js/jquery-1.11.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
