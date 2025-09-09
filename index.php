@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include('component/header.php'); ?>
+   <?php 
+        include "component/header.php";
+   ?>
     <body data-bs-spy="scroll" data-bs-target="#header" tabindex="0">
-        <?php
-            require_once('route/web.php');
+       <?php 
+            include "component/navbar.php";
+
+
+            // konten
+            $page = isset($_GET['page']) ? $_GET['page'] : 'home';
+
+            if($page == 'home') include "page/home.php";
+            else if($page == 'shopall') include "page/shop-all.php";
+
+           
             include "component/footer.php";
         ?>
         <script src="js/jquery-1.11.0.min.js"></script>

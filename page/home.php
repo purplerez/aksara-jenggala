@@ -1,4 +1,4 @@
-<?php include 'component/navbar.php'; ?>
+<?php //include 'component/navbar.php'; ?>
 <?php include 'component/billboard.php'; ?>
 
 <section id="client-holder" data-aos="fade-up">

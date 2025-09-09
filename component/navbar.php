@@ -64,7 +64,7 @@
 						<nav id="navbar">
 							<div class="main-menu stellarnav">
 								<ul class="menu-list">
-									<li class="menu-item active"><a href="index.html">Home</a></li>
+									<li class="menu-item active"><a href="index.php">Home</a></li>
 									<!-- <li class="menu-item has-sub">
 										<a href="#pages" class="nav-link">Pages</a>
 
