@@ -1,5 +1,4 @@
-<?php //include 'component/navbar.php'; 
-?>
+<?php include 'component/navbar.php'; ?>
 	
 	<section id="featured-books" class="py-5 my-5">
 		<div class="container">
