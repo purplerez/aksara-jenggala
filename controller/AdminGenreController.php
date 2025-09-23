@@ -1,5 +1,6 @@
-<?php
-class GenreController{
+<?php 
+
+class AdminGenreController {
     private $db;
     private $genre;
 
@@ -9,13 +10,16 @@ class GenreController{
         $this->genre = new Genre($this->db);
     }
 
-    public function index(){
+    public function index() {
+        include "page/admin/input_genre.php";
+    }
+
+    public function read_all() {
         $stmt = $this->genre->read();
         $result = $stmt->get_result();
-
         $genres = $result->fetch_all(MYSQLI_ASSOC);
-
-        include "page/genre_all.php";
+        
+        include "page/admin/genre_all.php";
     }
 
 }
