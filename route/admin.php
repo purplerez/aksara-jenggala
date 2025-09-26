@@ -14,67 +14,18 @@ $genre = new AdminGenreController();
 
 switch ($page){
     case 'dashboard' : include "page/dashboard.php"; break;
-    case 'genre' : {
+    case 'genre' : {  
+        switch ($action) {
+            case 'delete' : 
+                $genre->delete($_GET['id']); break;
+            case 'edit' : 
+                $genre->edit($_GET['id']);
+                break;
+        }  
         $genre->index();
-        $genre->read_all();
+        $genre->read_all();   
+      
+       
+        // if($_POST) $genre->create();
     }
 }
-
-/*
-
-
-switch ($page) {
-    case 'login':
-        $admin->login();
-        break;
-        
-    case 'logout':
-        $admin->logout();
-        break;
-        
-    case 'dashboard':
-        $admin->checkAuth();
-        $admin->dashboard();
-        break;
-        
-    case 'genre':
-        $admin->checkAuth();
-        switch ($action) {
-            case 'create':
-                $adminGenre->create();
-                break;
-            case 'edit':
-                $adminGenre->edit();
-                break;
-            case 'delete':
-                $adminGenre->delete();
-                break;
-            default:
-                $adminGenre->index();
-                break;
-        }
-        break;
-        
-    case 'buku':
-        $admin->checkAuth();
-        switch ($action) {
-            case 'create':
-                $adminBuku->create();
-                break;
-            case 'edit':
-                $adminBuku->edit();
-                break;
-            case 'delete':
-                $adminBuku->delete();
-                break;
-            default:
-                $adminBuku->index();
-                break;
-        }
-        break;
-        
-    default:
-        $admin->login();
-        break;
-}
-        */
