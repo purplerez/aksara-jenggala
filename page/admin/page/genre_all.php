@@ -9,6 +9,9 @@
                                     <th class="text-center">
                                         Nama Genre
                                     </th>
+									<th colspan=2>
+										Menu
+									</th>
                                 </tr>
                             <?php
                             if(isset($genres)){
@@ -17,6 +20,8 @@
                                 <tr>
                                     <td><?= $genre['id'] ?></td>
                                     <td><?= $genre['nama'] ?></td>
+									<td><a href="?page=genre&action=edit&id=<?= $genre['id'] ?>">Edit</a></td>
+									<td><a href="?page=genre&action=delete&id=<?= $genre['id'] ?>">Hapus</a></td>
                                 </tr>
                             <?php }
                             } else { ?>
