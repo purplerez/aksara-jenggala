@@ -10,12 +10,24 @@ class GenreController{
     }
 
     public function index(){
-        $stmt = $this->genre->read();
-        $result = $stmt->get_result();
+        try{
+            $stmt = $this->genre->read();
 
-        $genres = $result->fetch_all(MYSQLI_ASSOC);
+            if(!($stmt)) throw new \Exception($stmt->error);
 
-        include "page/genre_all.php";
+            $result = $stmt->get_result();
+
+            if(!($result)) throw new \Exception($result->error);
+
+            $genres = $result->fetch_all(MYSQLI_ASSOC);
+
+            include "page/genre_all.php";
+        }
+        catch(\Exception $e){
+            echo $e->getMessage();
+        }
+
+        
     }
 
 }
