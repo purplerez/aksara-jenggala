@@ -11,31 +11,27 @@ class AdminGenreController {
     }
 
     public function index() {
-
-        if(isset($_POST['submit'])) {
-            $this->genre->nama = $_POST['nama'];
-            if(isset($_GET['action']) && $_GET['action'] == 'edit' && isset($_GET['id'])) {
-                $this->genre->update($_GET['id']);
-            } else {
-                $this->genre->create();
-            }
-            header("Location: index.php?page=genre");
-            exit;
-        }
-        if(isset($_GET['action']) && $_GET['action'] == 'edit' && isset($_GET['id'])) {
-            $stmt = $this->genre->read_one($_GET['id']);
-            $result = $stmt->get_result();
-            $edit = $result->fetch_assoc();
-        }
-        include "page/input_genre.php";
-    }
-
-    public function read_all() {
         $stmt = $this->genre->read();
         $result = $stmt->get_result();
         $genres = $result->fetch_all(MYSQLI_ASSOC);
 
-        include "page/genre_all.php";
+        include "page/view_genre.php";
+    }
+
+    public function create() {
+        include "page/input_genre.php";
+    }
+
+    public function store() {
+        // echo "test";
+        
+
+            $this->genre->nama = $_POST['nama'];
+            $this->genre->create();
+
+            // header("Location: index.php?page=genre");
+            exit;
+        // }
     }
 
     public function delete($id){
