@@ -3,7 +3,7 @@
     <?php include "component/header.php"; ?>
 <body data-bs-spy="scroll" data-bs-target="#header" tabindex="0">
     
-
+<!-- INI ADALAH KOMEN BARU -->
         <!-- akan dirubah -->
         <?php 
             include "route/web.php";
